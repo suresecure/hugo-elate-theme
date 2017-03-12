@@ -448,11 +448,11 @@
 
 		burgerMenu();
 
-		clickMenu();
+    //clickMenu();
 
 		windowScroll();
 
-		navigationSection();
+		//navigationSection();
 
 		goToTop();
 

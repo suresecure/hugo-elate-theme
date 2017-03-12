@@ -10,17 +10,18 @@
     <body>
         {{ partial "simple_nav.html" .}}
 		
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          {{ range .Paginator.Pages }}
-              {{ .Render "archive" }}
-          {{ end }}
-          {{ template "_internal/pagination.html" . }}
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <h1> {{ .Title }} </h1>
+                  {{ .Content }}
+                  <!--{{ partial "comments.html" .}}-->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </article>
 
         	{{ partial "simple_footer.html" .}}
         {{ partial "js.html" .}}
